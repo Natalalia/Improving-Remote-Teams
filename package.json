@@ -7,7 +7,8 @@
     "setup-dbs": "psql -f db/setup.sql",
     "migrate-make": "knex migrate:make",
     "migrate-latest": "knex migrate:latest",
-    "migrate-rollback": "knex migrate:rollback"
+    "migrate-rollback": "knex migrate:rollback",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
     "express": "^4.17.1",
     "knex": "^0.19.3",
     "pg": "^7.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
