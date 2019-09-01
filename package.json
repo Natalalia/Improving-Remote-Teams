@@ -1,0 +1,23 @@
+{
+  "name": "improving-remote-teams",
+  "version": "1.0.0",
+  "description": "app for morcillaConf hackathon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Natalalia/Improving-Remote-Teams.git"
+  },
+  "author": "The Gang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Natalalia/Improving-Remote-Teams/issues"
+  },
+  "homepage": "https://github.com/Natalalia/Improving-Remote-Teams#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.19.3"
+  }
+}
