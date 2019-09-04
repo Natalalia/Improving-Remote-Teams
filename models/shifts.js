@@ -36,4 +36,19 @@ const addFinishTime = userId => {
   });
 };
 
-module.exports = { addFinishTime, addStartTime };
+const getShiftsByUsers = (usersIds, fromDate, toDate) => {
+  return connection("shifts")
+    .whereIn('employee_id', usersIds)
+    .andWhere(builder => {
+      builder.orWhere(builder => {
+        builder.where('start_time', '>=', fromDate);
+        builder.where('start_time', '<=', toDate);
+      })
+      builder.orWhere(builder => {
+        builder.where('finish_time', '>=', fromDate);
+        builder.where('finish_time', '<=', toDate);
+      })
+    })   
+}
+
+module.exports = { addFinishTime, addStartTime, getShiftsByUsers };
