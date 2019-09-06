@@ -7,7 +7,6 @@ const postAttendance = async (req, res) => {
     const fromTime = moment().subtract(1, "day").startOf("day");
     const toTime = moment().subtract(1, "day").endOf("day");
     const attendance = await getAttendanceByHours(channel.members, fromTime, toTime);
-    console.log(attendance)
     let text = attendance.map(({ from, to, shifts }) => {
         const startHour = ("0" + moment(from).hour()).slice(-2);
         const endHour = ("0" + (moment(to).hour() + 1)).slice(-2);
